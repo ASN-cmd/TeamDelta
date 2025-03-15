@@ -12,6 +12,10 @@ const Home = () => {
     navigate('/login');
   };
 
+  const navigateToBuyStocks = () => {
+    navigate('/buy-stocks');
+  };
+
   return (
     <div className="home-container">
       <header className="dashboard-header">
@@ -26,19 +30,19 @@ const Home = () => {
       
       <div className="dashboard-content">
         <div className="dashboard-card">
-          <h3>Your Profile</h3>
-          <p>View and edit your profile information</p>
-          <button className="dashboard-btn">View Profile</button>
+          <h3>Buy Stocks</h3>
+          <p>Invest in new assets </p>
+          <button className="dashboard-btn" onClick={navigateToBuyStocks}>Buy/Sell</button>
         </div>
         <div className="dashboard-card">
-          <h3>Your Activities</h3>
-          <p>Check your recent activities</p>
-          <button className="dashboard-btn">View Activities</button>
+          <h3>View Portfolio</h3>
+          <p>Check owned stocks, bonds, and insurance</p>
+          <button className="dashboard-btn">View Portfolio</button>
         </div>
         <div className="dashboard-card">
-          <h3>Settings</h3>
-          <p>Manage your account settings</p>
-          <button className="dashboard-btn">Go to Settings</button>
+          <h3>Sell Investments</h3>
+          <p>Liquidate existing ones</p>
+          <button className="dashboard-btn">Buy/Sell</button>
         </div>
       </div>
     </div>

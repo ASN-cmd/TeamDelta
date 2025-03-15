@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
+import BuyStocks from "./BuyStocks";
 import { AuthProvider, useAuth } from "./AuthContext";
 
 // Protected route component
@@ -30,6 +31,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Home />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/buy-stocks" 
+            element={
+              <ProtectedRoute>
+                <BuyStocks />
               </ProtectedRoute>
             } 
           />
