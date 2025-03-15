@@ -4,7 +4,7 @@ import { useAuth } from './AuthContext';
 import './App.css';
 
 const BuyStocks = () => {
-  const { user, updateUserCredits } = useAuth();
+  const { user, updateUserCredits, addStockToPortfolio } = useAuth();
   const navigate = useNavigate();
   const [stocks, setStocks] = useState([]);
   const [userCredits, setUserCredits] = useState(10000); // Default credits
@@ -82,6 +82,9 @@ const BuyStocks = () => {
     
     // Update user credits in the context and localStorage
     updateUserCredits(newCredits);
+    
+    // Add stock to portfolio
+    const purchaseId = addStockToPortfolio(stock, quantity, stock.price);
     
     // Update available stock quantity
     setStocks(prevStocks => 
